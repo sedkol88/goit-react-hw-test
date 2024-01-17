@@ -1,0 +1,17 @@
+.list {
+  outline: 2px solid tomato;
+  padding: 20px;
+}
+
+.item {
+  background-color: green;
+}
+
+.link {
+  color: yellow;
+  font-weight: bold;
+}
+
+.active {
+  background-color: black;
+}
