@@ -9,7 +9,6 @@ class Searchbar extends Component {
 
   handleChange = ({ target }) => {
     const { name, value } = target;
-    console.log(value);
     this.setState({
       [name]: value,
     });
@@ -28,19 +27,22 @@ class Searchbar extends Component {
     const { search } = this.state;
 
     return (
-      <header>
-        <form onSubmit={handleSubmit}>
-          <button type="submit">
-            <span>Search</span>
+      <header className={styles.Searchbar}>
+        <form className={styles.SearchForm} onSubmit={handleSubmit}>
+          <button className={styles.SearchFormButton} type="submit">
+            <span></span>
           </button>
 
           <input
+            className={styles.SearchFormInput}
             value={search}
             onChange={handleChange}
+            name="search"
             type="text"
-            // autoComplete="off"
-            // autoFocus
+            autoComplete="off"
+            autoFocus
             placeholder="Search images and photos"
+            required
           />
         </form>
       </header>
